@@ -68,24 +68,24 @@ export default function RegisterForm({ navigation }) {
     }
 
     return (
-        <>
+        <View style={styles.container}>
             <TextInput
                 style={[styles.input, formError.email && styles.error]}
                 placeholder="Correo electrónico"
-                placeholderTextColor="#969696"
+                placeholderTextColor="#FFFFFF"
                 onChange={(e) => setFormData({ ...formData, email: e.nativeEvent.text })}
             />
             <TextInput
                 style={[styles.input, formError.password && styles.error]}
                 placeholder="Contraseña"
-                placeholderTextColor="#969696"
+                placeholderTextColor="#FFFFFF"
                 secureTextEntry={true}
                 onChange={(e) => setFormData({ ...formData, password: e.nativeEvent.text })}
             />
             <TextInput
                 style={[styles.input, formError.repeatPassword && styles.error]}
                 placeholder="Confirmar contraseña"
-                placeholderTextColor="#969696"
+                placeholderTextColor="#FFFFFF"
                 secureTextEntry={true}
                 onChange={(e) => setFormData({ ...formData, repeatPassword: e.nativeEvent.text })}
             />
@@ -97,35 +97,40 @@ export default function RegisterForm({ navigation }) {
                     <Text style={styles.textBtn}>Iniciar sesión</Text>
                 </TouchableOpacity>
             </View>
-        </>
-    )
-}
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#A2F5BF', // Fondo verde pastel
+    },
     textBtn: {
-        color: "black", // Cambiar el color a negro
+        color: "#FFFFFF", // Texto blanco
         fontSize: 16,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     input: {
         height: 50,
-        color: "black", // Cambiar el color a negro
+        color: "#FFFFFF", // Texto blanco
         width: 300,
-        backgroundColor: '#1F5A1B',
+        backgroundColor: '#006400', // Fondo verde oscuro
         borderRadius: 50,
         borderWidth: 1.5,
-        borderColor: '#1F5A1B',
+        borderColor: '#006400', // Borde verde oscuro
         fontSize: 18,
         paddingHorizontal: 20,
         marginBottom: 30,
+        textAlign: 'center', // Centra el texto
     },
     login: {
-        flex: 1,
-        justifyContent: 'flex-end',
         marginBottom: 10,
     },
     error: {
         borderWidth: 1.5,
         borderColor: '#940c0c',
-    }
-})
+    },
+});

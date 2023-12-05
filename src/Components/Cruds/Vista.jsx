@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import connection from "../../utils/connection";
 import { TouchableOpacity } from "react-native-gesture-handler";
+
 export default function Vista() {
   const db = getFirestore(connection);
   const [lista, setLista] = useState([]);
@@ -59,11 +60,11 @@ export default function Vista() {
 
 const styles = StyleSheet.create({
   lista: {
-    backgroundColor: "##CFCFCF",
+    backgroundColor: "#004d40", // Cambiado a verde oscuro
     padding: 10,
   },
   itemContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: "#aed581", // Cambiado a verde pastel
     borderRadius: 10,
     padding: 15,
     marginVertical: 10,

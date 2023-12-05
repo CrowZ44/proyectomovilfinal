@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     Container: {
       flex: 1,
       padding: 35,
+      backgroundColor: '#b0e57c',
     },
     inputgruop: {
       flex: 1,

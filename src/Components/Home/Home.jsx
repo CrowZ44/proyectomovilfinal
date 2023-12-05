@@ -17,27 +17,19 @@ export default function Home({ navigation }) {
   };
 
   return (
-    <ScrollView style={styles.Container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Esta es la pagina principal</Text>
-      <View styles={styles.inputgruop}>
-        <Button title="Crear Mascota" onPress={changeForm} />
+      <View style={styles.buttonContainer}>
+        <Button title="Crear Mascota" onPress={changeForm} color="green" />
       </View>
-      <View>
-        <Button
-          styles={styles.inputgruop}
-          title="Eliminar Mascota"
-          onPress={changeForm2}
-        />
+      <View style={styles.buttonContainer}>
+        <Button title="Eliminar Mascota" onPress={changeForm2} color="green" />
       </View>
-      <View styles={styles.inputgruop}>
-        <Button title="Editar Mascota" onPress={changeForm3} />
+      <View style={styles.buttonContainer}>
+        <Button title="Editar Mascota" onPress={changeForm3} color="green" />
       </View>
-      <View>
-        <Button
-          styles={styles.inputgruop}
-          title="Ver Mascota"
-          onPress={changeForm4}
-        />
+      <View style={styles.buttonContainer}>
+        <Button title="Ver Mascota" onPress={changeForm4} color="green" />
       </View>
     </ScrollView>
   );
@@ -51,14 +43,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: "black", // Cambiar el color a negro
   },
-  Container: {
+  container: {
     flex: 1,
     padding: 35,
+    backgroundColor: "lightgreen", // Cambiar el color de fondo a verde lima
   },
-  inputgruop: {
-    flex: 1,
-    padding: 0,
+  buttonContainer: {
     marginBottom: 20,
     borderBottomWidth: 1,
+    backgroundColor: "darkgreen", // Cambiar el color de fondo de los botones a verde oscuro
   },
 });
